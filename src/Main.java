@@ -3,6 +3,7 @@ import main.java.com.behavioralpatterns.observer.StoreService;
 import main.java.com.behavioralpatterns.strategy.VehicleStrategyService;
 import main.java.com.lldquestions.expenseApprovalSystem.ExpenseSystem;
 import main.java.com.lldquestions.loggerDesign.LoggerSystem;
+import main.java.com.lldquestions.snakeNladder.Game;
 import main.java.com.lldquestions.tictactoe.TicTacToeGame;
 import main.java.com.structuralpatterns.abstractfactory.vehicle.VehicleFactory;
 import main.java.com.structuralpatterns.abstractfactory.vehicle.VehicleFactoryFactory;
@@ -60,7 +61,11 @@ public class Main {
 //        System.out.println("Game Winner is: " + result);
 
 
-        ExpenseSystem expenseSystem = new ExpenseSystem();
-        expenseSystem.addExpense(80000);
+//        ExpenseSystem expenseSystem = new ExpenseSystem();
+//        expenseSystem.addExpense(80000);
+
+        Game snakeLadder = new Game(10, 2, 1, 4,5);
+        snakeLadder.startGame();
+        System.out.println("Winner of the game is: " + snakeLadder.getWinner().name);
     }
 }
